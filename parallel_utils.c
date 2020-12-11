@@ -23,3 +23,4 @@ int ParallelRowMatrixVectorMultiply(int n, double *a, double *b, double *x, MPI_
     }
     free(fb);
     return 0;
+}
