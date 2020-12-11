@@ -24,5 +24,4 @@ void matrix_vector_mult(double **mat, double *vec, double *result, int rows, int
 
 int SequentialMatrixMultiply(int n, double *a, double *b, double *x);
 
-int ParallelRowMatrixVectorMultiply(int n, double *a, double *b, double *x, MPI_Comm comm);
 #endif
