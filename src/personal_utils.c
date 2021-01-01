@@ -34,7 +34,7 @@ void print_1d_arr(double *arr, int row)
     printf("\n");
 }
 
-int **fullfillArrayWithRandomNumbers(double *arr, int n)
+int fullfillArrayWithRandomNumbers(double *arr, int n)
 {
     /*
     * Fulfilling the array with random numbers 
@@ -105,4 +105,52 @@ int SequentialMatrixMultiply(int n, double *a, double *b, double *x)
         }
     }
     return 0;
+}
+
+/*
+* 2D array allocation (array of arrays)
+*/
+double **allocarray_2D_ArrayOfArrays(int row, int col)
+{
+    double **array = malloc(row * sizeof(double *));
+    size_t i, j;
+    for (i = 0; i < row; i++)
+    {
+        array[i] = malloc(col * sizeof(double));
+    }
+    return array;
+}
+
+double **fullfillArrayWithRandomNumbers_2D_ArrayOfArrays(double **arr, double row, double col)
+{
+    /*
+    * Fulfilling the array with random numbers 
+    * */
+    size_t i, j;
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            arr[i][j] = get_random();
+        }
+    }
+    return arr;
+}
+
+void print_2D_ArrayOfArrays(double **arr, int row, int col)
+{
+    size_t i, j;
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            printf("%3f ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void print_helloworld()
+{
+    printf("Hello, world!");
 }
