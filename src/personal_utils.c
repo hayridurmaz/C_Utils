@@ -150,6 +150,23 @@ void print_2D_ArrayOfArrays(double **arr, int row, int col)
     }
 }
 
+size_t SequentialMatrixMultiply_ArrayOfArrays(size_t n, double **a, double **b, double **x)
+{
+    size_t i, j, k;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            x[i][j] = 0;
+            for (k = 0; k < n; k++)
+            {
+                x[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    return 0;
+}
+
 void print_helloworld()
 {
     printf("Hello, world!");

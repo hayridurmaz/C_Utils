@@ -28,6 +28,8 @@ double **fullfillArrayWithRandomNumbers_2D_ArrayOfArrays(double **arr, double ro
 
 void print_2D_ArrayOfArrays(double **arr, int row, int col);
 
+size_t SequentialMatrixMultiply_ArrayOfArrays(size_t n, double **a, double **b, double **x);
+
 void print_helloworld();
 
 #endif
